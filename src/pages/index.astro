@@ -1,0 +1,23 @@
+---
+import CardSection from "../components/CardSection.astro";
+import Section from "../components/Section.astro";
+import Layot from "../layouts/Layot.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layot>
+	<div class="flex justify-center">
+		<div class="rounded-full bg-linear-to-b from-white to-yellow-50 p-6">
+			<div class="rounded-full bg-linear-to-b from-white to-yellow-200">
+				<img src="/favicon.png" class="md:max-w-3xs max-w-50" />
+			</div>
+		</div>
+	</div>
+	<h1 class="text-center text-2xl">Dalarnas Botaniska Förenening</h1>
+	<CardSection title="Vi i dalarnas botaniska förening jobbar med att">
+		<Card>Sammanföra människor med intresse för botanik.</Card>
+		<Card>Spridande och fördjupande av botanikintresset i allmänhet.</Card>
+		<Card>Utforska floran i Dalarna.</Card>
+		<Card>Skydd och vård av hotade växter och växtmiljöer.</Card>
+	</CardSection>
+</Layot>

@@ -1,0 +1,10 @@
+---
+const {title, columns} = Astro.props.title
+---
+
+<div class="h-full min-h-screen w-full dark:bg-olive-500 bg-olive-300 pt-12 p-4">
+    <h2 class="text-xl text-center mb-12">{title}</h2>
+    <div class="grid gap-14 md:grid-cols-2 md:gap-5 max-w-7xl place-content-around">
+        <slot />
+    </div>
+</div>
