@@ -1,10 +1,14 @@
 ---
-const {title, columns} = Astro.props.title
+const { cardTitle } = Astro.props;
 ---
 
-<div class="h-full min-h-screen w-full dark:bg-olive-500 bg-olive-300 pt-12 p-4">
-    <h2 class="text-xl text-center mb-12">{title}</h2>
-    <div class="grid gap-14 md:grid-cols-2 md:gap-5 max-w-7xl place-content-around">
-        <slot />
+<div class="dark:bg-olive-500 bg-olive-300 pt-12 p-4">
+    {cardTitle && <h2 class="text-xl text-center mb-12">{cardTitle}</h2>}
+    <div class="w-full flex justify-center">
+        <div
+            class="grid gap-4 md:grid-cols-3 md:gap-5 max-w-7xl w-full place-content-between"
+        >
+            <slot />
+        </div>
     </div>
 </div>

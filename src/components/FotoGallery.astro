@@ -1,0 +1,34 @@
+---
+import Foto from "./Foto.astro";
+
+const { urls } = Astro.props;
+---
+
+<ul class="flex center-content foto-container">
+    {
+        urls.map((url) => (
+            <li>
+                <Foto url={url} />
+            </li>
+        ))
+    }
+</ul>
+<script>
+    setInterval(cycleThrough, 10000);
+    const fotoContainers = document.getElementsByClassName("foto-container");
+
+    function cycleThrough() {
+        for (let i = 0; i < fotoContainers.length; i++) {
+            let fotoContainer = fotoContainers.item(i);
+            if (fotoContainer == null) {
+                continue;
+            }
+            let firstChild = fotoContainer.firstChild;
+            if (firstChild == null) {
+                continue;
+            }
+            fotoContainer.removeChild(firstChild);
+            fotoContainer.appendChild(firstChild);
+        }
+    }
+</script>

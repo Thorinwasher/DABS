@@ -2,28 +2,43 @@
 ---
 
 <header>
-    <nav class="dark:bg-olive-600 *:dark:text-white bg-olive-400">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-                <div
-                    class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-                >
-                    <h2>
-                        <a href="/"
-                            ><img
-                                src="/favicon.png"
-                                alt="DABS ikon"
-                                class="h-12 w-auto"
-                            />
-                        </a>
-                    </h2>
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <div><a href="/annan-sida">Annan sida</a></div>
-                        </div>
-                    </div>
+    <nav
+        class="dark:bg-olive-600 *:dark:text-white bg-olive-400 flex justify-center p-2"
+    >
+        <div
+            class="w-full max-w-7xl relative flex h-16 items-center justify-between"
+        >
+            <h2 class="flex-none">
+                <a href="/"
+                    ><img
+                        src="/favicon.png"
+                        alt="DABS ikon"
+                        class="h-12 w-auto"
+                    />
+                </a>
+            </h2>
+            <div class="hidden sm:ml-6 sm:block flex-none">
+                <div class="flex space-x-4">
+                    <div><a href="/books">Böcker</a></div>
                 </div>
             </div>
+            <div class="hidden sm:ml-6 sm:block flex-none">
+                <div class="flex space-x-4">
+                    <div><a href="/maps">Utbredningskartor</a></div>
+                </div>
+            </div>
+            <div class="hidden sm:ml-6 sm:block flex-none">
+                <div class="flex space-x-4">
+                    <div><a href="/about">Om oss</a></div>
+                </div>
+            </div>
+            <a href="/stadgar">
+                <img
+                    src="/image/leafes.svg"
+                    class="md:max-w-auto max-h-8 flex-none -scale-x-100"
+                />
+                Stadgar
+            </a>
         </div>
     </nav>
 </header>
