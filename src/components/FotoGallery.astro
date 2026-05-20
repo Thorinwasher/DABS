@@ -1,14 +1,22 @@
 ---
 import Foto from "./Foto.astro";
-
-const { urls } = Astro.props;
+interface Props {
+    images: Array<{
+        url: string;
+        description: string;
+    }>;
+}
+const { images } = Astro.props;
 ---
 
-<ul class="flex center-content foto-container">
+<ul
+    class="flex justify-center-safe foto-container max-w-full overflow-hidden mt-4 mb-12"
+>
     {
-        urls.map((url) => (
-            <li>
-                <Foto url={url} />
+        images.map((image) => (
+            <li class="flex-none flex place-items-center flex-col">
+                <Foto url={image.url} alt={image.description} />
+                {image.description}
             </li>
         ))
     }
